@@ -1,0 +1,34 @@
+<div id = "header">
+	<a href="/"><h1>Survey Gorilla</h1></a>
+	<% if @user == nil %>
+		<a href="/login"><div id ="btn_home"><p>Login</p></div></a>
+	<% else %>
+		<a href="/user"><div id ="btn_home"><p>User</p></div></a>
+	<% end %>
+</div>
+
+<form id = "create_survey" method = "POST" action = '/create_survey'>
+	<h3>Name your survey :</h3> <br>
+	<input id = "title_input" type = "text" name = "title">
+	<br>	
+	<input type = "submit" value="Submit">
+</form>
+
+<form id = "create_question" method = "POST" action = '/create_question'>
+	<h3>What is the question?</h3> <br>
+	<input type = "text" name= "question" value = "">
+	</br>
+	<input type = "submit" value="Submit">
+	<a href="/finished"><div id ="btn_home"><p>Done?</p></div></a>
+</form>
+
+<form id = "create_choice" method = "POST" action = '/create_choice'>
+	<h3>What is the choice?</h3> <br>
+	<input type = "text" name = "choice" value = "">
+	<input id = "add_another_choice" type = "submit" value="Add choice and make another one">
+	<input id = "add_another_question" type = "submit" value="Add choice and make new question">
+	<a href="/finished"><div id ="btn_home"><p>Done?</p></div></a>
+</form>
+
+
+

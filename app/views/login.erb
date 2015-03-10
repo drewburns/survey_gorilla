@@ -1,0 +1,30 @@
+<div id = "header">
+	<a href="/"><h1>Survey Gorilla</h1></a>
+	<% if @user == nil %>
+		<a href="/login"><div id ="btn_home"><p>Login</p></div></a>
+	<% else %>
+		<a href="/user"><div id ="btn_home"><p>User</p></div></a>
+	<% end %>
+</div>
+<h1><%= @stuff %> </h1>
+<form id = 'login' method = "POST" action = '/login'>
+	<h1>Login</h1>
+	Username:<br>
+	<input type="text" name="username_login">
+	<br>
+	Password:<br>
+	<input type="text" name="password_login">
+	<br><br>
+	<input type="submit" value="Submit">
+</form>
+
+<form id = 'create' method = "POST" action = '/newuser'>
+	<h1>Create a new account</h1>
+	Username:<br>
+	<input type="text" name="username_create">
+	<br>
+	Password:<br>
+	<input type="text" name="password_create">
+	<br><br>
+	<input type="submit" value="Submit">
+</form>

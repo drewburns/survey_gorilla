@@ -1,0 +1,14 @@
+<div id = "header">
+	<a href="/"><h1>Survey Gorilla</h1></a>
+	<a href="/create"><div id ="btn_home"><p>New</p></div></a>
+</div>
+
+
+<div id = "user_body">
+	<h1>Your surveys:</h1>
+	<% @user.surveys.each {|survey| %>
+		<h3><%= survey.title %></h3>
+		<a href= <%="/survey/" + survey.id.to_s %> >Take the survey</a>
+		<a href= <%="/survey/stats/" + survey.id.to_s %> >See the stats</a>
+	<% } %>
+</div>

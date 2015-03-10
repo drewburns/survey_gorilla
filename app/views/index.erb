@@ -1,0 +1,18 @@
+<div id = "background">
+<div id = "header">
+	<a href="/"><h1>Survey Gorilla</h1></a>
+	<% if @user == nil %>
+		<a href="/login"><div id ="btn_home"><p>Login</p></div></a>
+	<% else %>
+		<a href="/user"><div id ="btn_home"><p>User</p></div></a>
+	<% end %>
+</div>
+
+	<div id = 'index_body'>
+		<div id = "appear" class = "slideDown">
+			<h1>Let's get to work!</h1>
+			<h1>Let's do some research!</h1>
+			<a href="/login"><div id ="btn_start"><p>Get Started!</p></div></a>
+		</div>
+	</div>
+</div>

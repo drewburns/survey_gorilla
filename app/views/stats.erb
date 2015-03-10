@@ -1,0 +1,16 @@
+<div id = "header">
+	<a href="/"><h1>Survey Gorilla</h1></a>
+	<% if @user == nil %>
+		<a href="/login"><div id ="btn_home"><p>Login</p></div></a>
+	<% else %>
+		<a href="/user"><div id ="btn_home"><p>User</p></div></a>
+	<% end %>
+</div>
+<div id = "stat_body">
+<% @questions.each {|question| %>
+	<h1><%= question.text %></h1>
+	<% question.choices.each {|choice| %>
+		<p><%= choice.text %> - <%= Selection.where(choice_id: choice.id).size.to_s  + " out of " + question.selections.size.to_s %> responses </p>
+  <%} %>
+<% } %>
+</div>
