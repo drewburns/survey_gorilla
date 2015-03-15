@@ -1,11 +1,13 @@
 <form id = "take_form" method = 'POST' action = <%='/survey/'+ @survey.id.to_s%>>
 	<% @survey.questions.each {|question| %>
+	<div id = "question_taking">
 		<h3><%= question.text %></h3>
 		<% question.choices.each {|choice| %>
-		<%=choice.text %> 
+			<%=choice.text %> 
 		<input type="radio" name=<%= "question" + "[#{question.id.to_s}]" %> value= <%= choice.id %> >
 		<br>
+			<% } %>
+			</div>
 		<% } %>
-	<% } %>
- <input type = 'submit' value = "Submit">
+ <input id = "take_form_submit"type = 'submit' value = "Submit">
 </form>

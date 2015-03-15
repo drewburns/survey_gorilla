@@ -189,7 +189,49 @@ input {
 	margin-top: 10px;
 	margin-top: 10px;
 }
+
+#another_choice {
+	margin-left: 30%;
+	text-align: center;
+	width: 40%;
+	color: yellow;
+	background-color:black;
+	display: none;
+
+}
+#another_question {
+	margin-left: 30%;
+	text-align: center;
+	width: 40%;
+	color: yellow;
+	background-color:black;
+	display: none;
+}
 /*end create*/
+
+#take_form {
+
+}
+
+#question_taking {
+	box-shadow: 3px 3px 3px gray;
+	text-align: center;
+	margin-top: 5px;
+	background-color: black ;
+	color: white;
+	width: 80%;
+	margin-left: 10%;
+}
+
+#take_form_submit {
+	width: 100px;
+	background-color: black;
+	color:white;
+	margin-left: 45%;
+
+}
+
+
 
 
 
